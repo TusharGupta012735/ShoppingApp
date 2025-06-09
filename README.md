@@ -9,3 +9,9 @@ A Flutter shopping app.
 - View and manage items in your cart.
 - State management for efficient UI updates.
 - Clean and modular code structure for easy maintenance.
+
+## Things Learned
+
+- State Management
+- Widget Tree
+- UI development using flutter
