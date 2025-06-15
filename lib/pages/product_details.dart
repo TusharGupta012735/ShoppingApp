@@ -25,6 +25,7 @@ class _ProductDetailsState extends State<ProductDetails> {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Product added successfully!')),
       );
+      Navigator.of(context).pop();
     } else {
       ScaffoldMessenger.of(
         context,
@@ -136,7 +137,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ),
                       onPressed: () {
                         onTap();
-                        Navigator.of(context).pop();
                       },
                       child: const Text(
                         "Add to cart",
