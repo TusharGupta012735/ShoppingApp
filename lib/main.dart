@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/card_provider.dart';
 import 'package:shop_app/home_page.dart';
+import 'package:shop_app/provider/cart_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //to change light dark theme of app
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
-    return Provider(
-      create: (context) => CardProvider(),
+    return ChangeNotifierProvider(
+      create: (context) => CartProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Shop App",
+        title: "Shop App",  
         home: HomePage(),
         theme: ThemeData(
           appBarTheme: AppBarTheme(
